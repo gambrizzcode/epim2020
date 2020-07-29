@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,6 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+<div class="preloader">
+	<div class="loading">
+		<img src="assets/loading.gif" width="200">
+	</div>
+</div>
 
 <!-- Ini Navbar -->
 <div class="ininavbar">
@@ -25,7 +31,7 @@
 	<div class="row">
 
 		<!-- Ini Halaman Depan -->
-		<div class="col-12">
+		<div class="col-12" id="beranda">
 			<h1 class="headline mt-5 pt-5">
 				EXPO DAN PEKAN ILMIAH MAHASISWA
 			</h1>
@@ -47,7 +53,7 @@
 		<br>
 
 		<!-- Ini Halaman Tentang -->
-		<div class="mt-5 pt-5 col-md-6">
+		<div class="mt-5 pt-5 col-md-6" id="tentang">
 			<h3 class="title-text">Tentang EPIM</h3>
 			<br><br>	
 			<p style="font-size: 18px; letter-spacing: 0.59px;" class="paragraph">
@@ -63,7 +69,7 @@
 		<br><br>
 
 		<!-- Ini Halaman Rangkaian Kegiatan -->
-		<div class="mt-5 pt-5 col-md-12">
+		<div class="mt-5 pt-5 col-md-12" id="rangkaian">
 			<h3 class="title-text" align="center">Rangkaian Kegiatan</h3>
 		</div>
 
@@ -76,7 +82,7 @@
   				<p class="paragraph">Live Coding dan Jaringan</p>
 
   				<div class="ellips mx-auto" align="center">
-  					<a href="#" class="paragraph" style="font-size: 11px;letter-spacing: 0.55px;color: #A1A7C7;">Baca Selengkapnya <img src="assets/right_arrow.svg"></a>
+  					<a href="lombait.html" class="paragraph" style="font-size: 11px;letter-spacing: 0.55px;color: #A1A7C7;">Baca Selengkapnya <img src="assets/right_arrow.svg"></a>
   				</div>
 			</div>
 		</div>
@@ -90,7 +96,7 @@
   				<p class="paragraph">Pameran Teknologi</p>
 
   				<div class="ellips mx-auto" align="center">
-  					<a href="#" class="paragraph" style="font-size: 11px;letter-spacing: 0.55px;color: #A1A7C7;">Baca Selengkapnya <img src="assets/right_arrow.svg"></a>
+  					<a href="expo.html" class="paragraph" style="font-size: 11px;letter-spacing: 0.55px;color: #A1A7C7;">Baca Selengkapnya <img src="assets/right_arrow.svg"></a>
   				</div>
 			</div>
 		</div>
@@ -104,7 +110,7 @@
   				<p class="paragraph">Karya Tulis</p>
 
   				<div class="ellips mx-auto" align="center">
-  					<a href="#" class="paragraph" style="font-size: 11px;letter-spacing: 0.55px;color: #A1A7C7;">Baca Selengkapnya <img src="assets/right_arrow.svg"></a>
+  					<a href="lombatcpit.html" class="paragraph" style="font-size: 11px;letter-spacing: 0.55px;color: #A1A7C7;">Baca Selengkapnya <img src="assets/right_arrow.svg"></a>
   				</div>
 			</div>
 		</div>
@@ -118,7 +124,7 @@
   				<p class="paragraph">Webinar</p>
 
   				<div class="ellips mx-auto" align="center">
-  					<a href="#" class="paragraph" style="font-size: 11px;letter-spacing: 0.55px;color: #A1A7C7;">Baca Selengkapnya <img src="assets/right_arrow.svg"></a>
+  					<a href="seminar.html" class="paragraph" style="font-size: 11px;letter-spacing: 0.55px;color: #A1A7C7;">Baca Selengkapnya <img src="assets/right_arrow.svg"></a>
   				</div>
 			</div>
 		</div>
@@ -134,7 +140,7 @@
 			<div class="col-md-12 col-xs-12 mt-5">
 
 				<!-- Ini Halaman Timeline -->
-				<div class="mt-5">
+				<div class="mt-5" id="timeline">
 					<br><br><br><br><br>
 					<h3 class="headline-white-text" align="center">Timeline Kegiatan</h3>
 				</div>
@@ -233,7 +239,7 @@
 <!-- Batas Halaman yg background biru full width -->
 
 <!-- Ini Footer -->
-<div class="inifooter">
+<div class="inifooter" id="hubungi">
 	<!-- Terpisah -->
 </div>
 <!-- Batas Footer -->
@@ -247,6 +253,11 @@ $(function(){
 	$(".ininavbar").load("navbar.html"); 
 	$(".inifooter").load("footer.html"); 
 });
+</script>
+<script>
+$(document).ready(function(){
+	$(".preloader").fadeOut();
+})
 </script>
 </body>
 </html>

@@ -14,7 +14,7 @@
 	font-family: 'Quicksand';
 }
 .mynavbar{
-	background: #6177FC 0% 0% no-repeat padding-box;
+	background: #6177FC;
 	box-shadow: 0px -5px 44px #5C5CDD62;
 }
 .title-text{
@@ -80,7 +80,7 @@
 .wadahtelpon{
 	width: 28px;
 	height: 28px;
-	background: #FFFFFF 0% 0% no-repeat padding-box;
+	background: #FFFFFF;
 	border: 1px solid #707070;
 	border-radius: 4px;
 	text-align: center;
@@ -99,4 +99,19 @@
 	margin-top: 700px;
 	border-top-left-radius: 100%;
 	border-top-right-radius: 100%;
+}
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background-color: #FFFFFF;
+}
+.preloader .loading {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
