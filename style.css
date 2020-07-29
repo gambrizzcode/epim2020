@@ -1,0 +1,102 @@
+.headline{
+	text-align: center;
+	font-family: 'Nunito';
+	letter-spacing: 2.07px;
+	color: #173AB2;
+	text-transform: uppercase;
+}
+.paragraph{
+	font-family: 'Quicksand';
+	color: #707070;
+}
+.regular-text{
+	text-align: left;
+	font-family: 'Quicksand';
+}
+.mynavbar{
+	background: #6177FC 0% 0% no-repeat padding-box;
+	box-shadow: 0px -5px 44px #5C5CDD62;
+}
+.title-text{
+	font-family: 'Quicksand';
+	color: #747FC3;
+	font-size: 32px;
+	letter-spacing: 0.35px;
+	font-weight: 800;
+}
+.headline-white-text{
+	font-family: 'Quicksand';
+	color: #FFFFFF;
+	font-size: 32px;
+	letter-spacing: 0.35px;
+	font-weight: 800;
+}
+.white-text{
+	font-family: 'Quicksand';
+	color: #FFFFFF;
+}
+.kotak{
+	text-align: center;
+	max-width: 408px;
+	height: 408px;
+	background: #FFFFFF;
+	box-shadow: 0px 3px 55px #4D5EC629;
+	border-radius: 33px;
+}
+.ellips{
+	width: 187px;
+	height: 28px;
+	background: #F4F5FF;
+	border-radius: 29px;
+}
+.kisruh{
+	width: 100%;
+	height: 1050px;
+	margin-top: -120px !important;
+	background: transparent linear-gradient(180deg, #6177FC 0%, #7B8EFA 100%);
+	border-radius: 79px 79px 0px 0px;
+}
+.wadahbakso{
+	max-width: 500px;
+}
+.bunder{
+	float: left;
+}
+.garis{
+	float: left;
+	margin-top: 60px;
+	margin-left: -20px;
+}
+.wadahtrans{
+	/* width: 390px; */
+	height: 104px;
+	background: #FFFFFF2C;
+	border-radius: 13px;
+	margin-left: 90px;
+}
+.wadahdalam{
+	text-align: left;
+}
+.wadahtelpon{
+	width: 28px;
+	height: 28px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #707070;
+	border-radius: 4px;
+	text-align: center;
+	float: left;
+}
+.footer{
+	height: auto;
+	padding-bottom: 80px;
+	background: #4253B5;
+}
+.repot{
+	width: 100%;
+	height: 950px;
+	background: #F7F8FA;
+	position: absolute;
+	margin-top: 700px;
+	border-top-left-radius: 100%;
+	border-top-right-radius: 100%;
+}
