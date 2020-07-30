@@ -53,7 +53,7 @@
 		<br>
 
 		<!-- Ini Halaman Tentang -->
-		<div class="mt-5 pt-5 col-md-6" id="tentang">
+		<div class="mt-5 pt-5 col-md-6 fade" id="tentang">
 			<h3 class="title-text">Tentang EPIM</h3>
 			<br><br>	
 			<p style="font-size: 18px; letter-spacing: 0.59px;" class="paragraph">
@@ -61,7 +61,7 @@
 			</p>		
 		</div>
 
-		<div class="mt-5 pt-5 mb-5 pb-5 col-md-6" align="center">
+		<div class="mt-5 pt-5 mb-5 pb-5 col-md-6 fade" align="center">
 			<img src="assets/lightbulb_moment.svg">
 		</div>
 		<!-- Batas Halaman Tentang -->
@@ -69,12 +69,12 @@
 		<br><br>
 
 		<!-- Ini Halaman Rangkaian Kegiatan -->
-		<div class="mt-5 pt-5 col-md-12" id="rangkaian">
+		<div class="mt-5 pt-5 col-md-12 fade" id="rangkaian">
 			<h3 class="title-text" align="center">Rangkaian Kegiatan</h3>
 		</div>
 
 		<!-- Kotak #1 -->
-		<div class="mt-5 pt-5 col-md-6">
+		<div class="mt-5 pt-5 col-md-6 fade">
 			<div class="kotak mx-auto" align="center">
   				<img src="assets/code.svg" class="mt-5 pt-3">
   				<br>
@@ -88,7 +88,7 @@
 		</div>
 
 		<!-- Kotak #2 -->
-		<div class="mt-5 pt-5 col-md-6">
+		<div class="mt-5 pt-5 col-md-6 fade">
 			<div class="kotak mx-auto" align="center">
   				<img src="assets/expo.svg" class="mt-5 pt-3">
   				<br>
@@ -102,7 +102,7 @@
 		</div>
 
 		<!-- Kotak #3 -->
-		<div class="mt-5 pt-5 col-md-6">
+		<div class="mt-5 pt-5 col-md-6 fade">
 			<div class="kotak mx-auto" align="center">
   				<img src="assets/script.svg" class="mt-5 pt-3">
   				<br>
@@ -116,7 +116,7 @@
 		</div>
 
 		<!-- Kotak #4 -->
-		<div class="mt-5 pt-5 col-md-6">
+		<div class="mt-5 pt-5 col-md-6 fade">
 			<div class="kotak mx-auto" align="center">
   				<img src="assets/training.svg" class="mt-5 pt-3">
   				<br>
@@ -140,13 +140,13 @@
 			<div class="col-md-12 col-xs-12 mt-5">
 
 				<!-- Ini Halaman Timeline -->
-				<div class="mt-5" id="timeline">
+				<div class="mt-5 fade" id="timeline">
 					<br><br><br><br><br>
 					<h3 class="headline-white-text" align="center">Timeline Kegiatan</h3>
 				</div>
 
 				<!-- Kotak Trans dan Bakso #1 -->
-				<div class="mx-auto wadahbakso">
+				<div class="mx-auto wadahbakso fade">
 					<svg height="60" width="60" class="bunder">
 						<circle cx="40" cy="40" r="15" stroke="white" stroke-width="10" fill="rgba(0,0,0,0)" />
 					</svg>
@@ -164,7 +164,7 @@
 				</div>
 				
 				<!-- Kotak Trans dan Bakso #2 -->
-				<div class="mx-auto wadahbakso">
+				<div class="mx-auto wadahbakso fade">
 					<svg height="60" width="60" class="bunder">
 						<circle cx="40" cy="40" r="15" stroke="white" stroke-width="10" fill="rgba(0,0,0,0)" />
 					</svg>
@@ -182,7 +182,7 @@
 				</div>
 					
 				<!-- Kotak Trans dan Bakso #3 -->
-				<div class="mx-auto wadahbakso">
+				<div class="mx-auto wadahbakso fade">
 					<svg height="60" width="60" class="bunder">
 						<circle cx="40" cy="40" r="15" stroke="white" stroke-width="10" fill="rgba(0,0,0,0)" />
 					</svg>
@@ -200,7 +200,7 @@
 				</div>
 				
 				<!-- Kotak Trans dan Bakso #4 -->
-				<div class="mx-auto wadahbakso">
+				<div class="mx-auto wadahbakso fade">
 					<svg height="60" width="60" class="bunder">
 						<circle cx="40" cy="40" r="15" stroke="white" stroke-width="10" fill="rgba(0,0,0,0)" />
 					</svg>
@@ -218,7 +218,7 @@
 				</div>
 				
 				<!-- Kotak Trans dan Bakso #5 -->
-				<div class="mx-auto wadahbakso">
+				<div class="mx-auto wadahbakso fade">
 					<svg height="60" width="60" class="bunder">
 						<circle cx="40" cy="40" r="15" stroke="white" stroke-width="10" fill="rgba(0,0,0,0)" />
 					</svg>
@@ -258,6 +258,21 @@ $(function(){
 $(document).ready(function(){
 	$(".preloader").fadeOut();
 })
+</script>
+<script>
+$(window).on("load",function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".fade").each(function() {
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+      if (objectBottom < windowBottom) {
+        if ($(this).css("opacity")==0) {$(this).fadeTo(300,1);}
+      } else {
+        if ($(this).css("opacity")==1) {$(this).fadeTo(300,0);}
+      }
+    });
+  }).scroll();
+});
 </script>
 </body>
 </html>
